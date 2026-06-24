@@ -268,6 +268,112 @@
   .igp__cap{padding:3px 10px 0;font-size:.68rem;color:#1b0f09;line-height:1.4;overflow:hidden}
   .igp__cap b{font-weight:700}
 
+  /* ---------- campaign architecture (overview) ---------- */
+  .arch{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:2.4rem}
+  .arch-card{background:var(--paper);border:1px solid rgba(63,11,18,.09);border-radius:var(--r);padding:1.5rem 1.55rem 1.6rem;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+  .arch-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--saffron),var(--gold))}
+  .arch-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .arch-card__n{font-family:'Bricolage Grotesque';font-weight:800;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:.5rem;display:block}
+  .arch-card__line{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.45rem;color:var(--maroon);line-height:1.06;margin:0 0 .6rem}
+  .arch-card__role{font-size:.86rem;font-weight:600;color:var(--red-ink);margin:0 0 .85rem}
+  .arch-card__what{font-size:.95rem;color:#5a4434;line-height:1.5;margin:0 0 1rem}
+  .arch-card__handles{font-size:.78rem;color:var(--muted);border-top:1px dashed rgba(63,11,18,.18);padding-top:.7rem;margin-top:auto;line-height:1.5}
+  .arch-card__handles b{color:var(--maroon);font-weight:700}
+
+  /* ---------- manifesto ---------- */
+  .manifesto{margin:2.2rem 0 .4rem;padding:1.85rem 2rem;background:rgba(247,200,99,.07);border-left:4px solid var(--gold-soft);border-radius:0 14px 14px 0;font-family:'Bricolage Grotesque';font-weight:500;font-size:clamp(1.02rem,1.65vw,1.2rem);line-height:1.5;color:var(--cream)}
+  .manifesto p{margin:0}
+  .manifesto p+p{margin-top:.7rem}
+  .manifesto b{color:var(--gold-soft);font-weight:700}
+  .manifesto em{color:#ffe1b3;font-style:normal;font-weight:700}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .manifesto{background:rgba(110,19,32,.06);border-left-color:var(--red);color:var(--espresso)}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .manifesto b{color:var(--red-ink)}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .manifesto em{color:var(--maroon-deep);font-weight:700}
+
+  /* ---------- film / situation cards ---------- */
+  .films{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px;margin-top:1.4rem}
+  .film{background:rgba(255,252,246,.06);border:1px solid rgba(247,200,99,.22);border-radius:13px;padding:1.15rem 1.25rem 1.25rem;transition:transform .22s ease,box-shadow .22s ease}
+  .film:hover{transform:translateY(-4px);box-shadow:0 18px 32px -18px rgba(0,0,0,.55)}
+  .film__n{font-family:'Bricolage Grotesque';font-weight:800;font-size:.7rem;letter-spacing:.04em;color:var(--maroon-deep);background:var(--gold-soft);border-radius:7px;padding:.22rem .46rem;display:inline-block;margin-bottom:.6rem}
+  .film__name{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.04rem;color:var(--cream);margin:0 0 .42rem;line-height:1.2}
+  .film__what{font-size:.86rem;color:rgba(251,244,231,.76);line-height:1.5;margin:0}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .film{background:var(--paper);border-color:rgba(63,11,18,.09)}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .film:hover{box-shadow:var(--shadow)}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .film__name{color:var(--maroon)}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .film__what{color:#5a4434}
+
+  /* ---------- festive lockups (Bas ek aur box / bite) ---------- */
+  .lockups{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:2.1rem}
+  .lockup{padding:1.7rem 1.8rem 1.8rem;border-radius:18px;background:linear-gradient(135deg,rgba(238,123,46,.2),rgba(242,168,43,.1));border:1px solid rgba(247,200,99,.34);position:relative;overflow:hidden}
+  .lockup::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(247,200,99,.22),transparent 70%);pointer-events:none}
+  .lockup__tag{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.65rem;display:block}
+  .lockup__line{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(1.5rem,3vw,1.95rem);color:var(--cream);line-height:1.04;margin:0 0 .7rem;letter-spacing:-.01em}
+  .lockup__note{font-size:.94rem;color:rgba(251,244,231,.82);line-height:1.5;margin:0;position:relative;z-index:1}
+
+  .extensions{margin-top:1.4rem;font-size:.92rem;color:rgba(251,244,231,.7);line-height:1.6}
+  .extensions b{color:var(--gold-soft);font-weight:700}
+
+  /* ---------- product chip strip ---------- */
+  .products{display:flex;flex-wrap:wrap;gap:9px;margin-top:1.3rem}
+  .product-chip{font-size:.84rem;font-weight:600;padding:.45rem .92rem;border-radius:999px;background:rgba(238,123,46,.13);color:var(--red-ink);border:1px solid rgba(238,123,46,.28)}
+  .section--maroon .product-chip,.section--dark .product-chip{background:rgba(247,200,99,.13);color:var(--gold-soft);border-color:rgba(247,200,99,.3)}
+
+  /* ---------- "lives on" (handle assignment) ---------- */
+  .lives-at{margin-top:2.3rem;padding:1.2rem 1.4rem;border-radius:14px;background:rgba(110,19,32,.06);border:1px solid rgba(110,19,32,.16);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:.93rem;color:var(--espresso);line-height:1.5}
+  .lives-at b{color:var(--maroon);font-weight:700}
+  .section--maroon .lives-at,.section--dark .lives-at{background:rgba(247,200,99,.07);border-color:rgba(247,200,99,.22);color:rgba(251,244,231,.88)}
+  .section--maroon .lives-at b,.section--dark .lives-at b{color:var(--gold-soft)}
+  .lives-at__h{font-family:'Hanken Grotesk';font-size:.85rem;font-weight:600;padding:.3rem .72rem;border-radius:8px;background:rgba(110,19,32,.08);color:var(--maroon);white-space:nowrap}
+  .section--maroon .lives-at__h,.section--dark .lives-at__h{background:rgba(247,200,99,.13);color:var(--gold-soft)}
+
+  /* ---------- per-handle 6-month plan (tracks) ---------- */
+  .tracks{margin-top:2rem;display:flex;flex-direction:column;gap:18px}
+  .track{background:var(--paper);border:1px solid rgba(63,11,18,.09);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 18px -10px rgba(63,11,18,.22);transition:transform .22s ease,box-shadow .22s ease}
+  .track:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .track__head{display:grid;grid-template-columns:1fr auto;gap:18px;padding:1.3rem 1.6rem 1.2rem;border-bottom:1px solid rgba(63,11,18,.08);background:linear-gradient(180deg,rgba(247,200,99,.09),transparent);align-items:end}
+  .track__handle{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.18rem;color:var(--maroon);line-height:1.08;margin:0 0 .3rem;word-break:break-word}
+  .track__role{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron);display:block;margin-bottom:.35rem}
+  .track__camp{text-align:right;font-size:.84rem;color:#5a4434;max-width:34ch;line-height:1.45}
+  .track__camp__lbl{display:block;font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--red-ink);margin-bottom:.25rem}
+  .track__camp b{color:var(--maroon-deep);font-weight:700}
+  .track__months{display:grid;grid-template-columns:repeat(6,1fr)}
+  .month{padding:1.05rem 1.1rem 1.1rem;border-right:1px solid rgba(63,11,18,.06);font-size:.85rem;color:#5a4434;line-height:1.46;position:relative}
+  .month:last-child{border-right:none}
+  .month__head{display:flex;align-items:baseline;gap:.4rem;margin-bottom:.4rem}
+  .month__m{font-family:'Bricolage Grotesque';font-weight:800;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--saffron)}
+  .month__mo{font-family:'Bricolage Grotesque';font-weight:800;font-size:.95rem;color:var(--maroon);line-height:1}
+  .month__txt{margin:0}
+  .month__txt b{color:var(--maroon-deep);font-weight:700}
+  @media(max-width:1020px){
+    .track__months{grid-template-columns:repeat(3,1fr)}
+    .month:nth-child(3n){border-right:none}
+    .month:nth-child(n+4){border-top:1px solid rgba(63,11,18,.06)}
+  }
+  @media(max-width:680px){
+    .track__head{grid-template-columns:1fr;gap:.5rem}
+    .track__camp{text-align:left;max-width:none}
+    .track__months{grid-template-columns:1fr}
+    .month{border-right:none;border-top:1px solid rgba(63,11,18,.06)}
+    .month:first-child{border-top:none}
+  }
+
+  /* campaign section title sizing */
+  .camp-title{font-size:clamp(2.4rem,5.2vw,3.9rem);margin:.55rem 0 0;max-width:18ch;letter-spacing:-.025em}
+  .camp-sub{max-width:62ch;margin-top:.95rem;font-size:1.08rem;color:rgba(251,244,231,.84);font-weight:500}
+  .section:not(.section--maroon):not(.section--dark):not(.section--cta) .camp-sub{color:#5a4434}
+
+  /* ---------- performance proof cards ---------- */
+  .proofs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:1.5rem}
+  .proof{background:rgba(255,252,246,.06);border:1px solid rgba(247,200,99,.22);border-radius:14px;padding:1.3rem 1.4rem 1.35rem;transition:transform .22s ease,box-shadow .22s ease;position:relative;overflow:hidden}
+  .proof::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--gold),var(--saffron));opacity:.7}
+  .proof:hover{transform:translateY(-4px);box-shadow:0 22px 38px -22px rgba(0,0,0,.55)}
+  .proof__brand{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.06rem;color:var(--gold-soft);margin:0 0 .45rem;line-height:1.15}
+  .proof__stat{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--saffron);margin:0 0 .65rem;padding-bottom:.55rem;border-bottom:1px dashed rgba(247,200,99,.22)}
+  .proof__what{font-size:.86rem;color:rgba(251,244,231,.78);line-height:1.5;margin:0}
+  .proof__what b{color:#ffe1b3;font-weight:700}
+  .more-startups{margin-top:1.5rem;font-size:.93rem;color:rgba(251,244,231,.7);font-style:italic;display:flex;align-items:center;gap:10px}
+  .more-startups::before{content:"";width:32px;height:1px;background:rgba(247,200,99,.4)}
+
   /* ---------- 6-month roadmap ---------- */
   .rm-note{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:8px 14px;font-size:.84rem;color:#5a4434}
   .rm-note b{color:var(--maroon)}
@@ -423,7 +529,7 @@
  <p class="h-intro reveal">You said it plainly: you don't want a page management vendor, you want a partner who can think, shoot and convert. Here's how every line of your brief lands with us.</p>
  <div class="grid-scope">
  <article class="scope reveal"><div class="scope__n">01</div><h3>Social media for QSR &amp; fresh food pages</h3><p>Always on calendars, community management and trend jacking, already live and growing for Isthara, Koreatown and Ice Please.</p></article>
- <article class="scope reveal"><div class="scope__n">02</div><h3>Performance marketing</h3><p>Funnels built for footfall, store orders and gifting sales, reach, engagement and conversion led campaigns, not vanity metrics.</p></article>
+ <article class="scope reveal"><div class="scope__n">02</div><h3>Performance marketing</h3><p>The full stack we already run for Golden Aces, Rajdarbar, Pacompro and Isthara. Lead generation ads for franchise, corporate gifting and B2B pipelines, plus reach, engagement and conversion campaigns for footfall, store orders and gifting sales, not vanity metrics.</p></article>
  <article class="scope reveal"><div class="scope__n">03</div><h3>In house food shoots &amp; reels</h3><p>Our own studio and crew. Sizzle reels, hero plating and outlet shoots produced in house, no third party hand offs.</p></article>
  <article class="scope reveal"><div class="scope__n">04</div><h3>Campaign ideation &amp; strategy</h3><p>Strategy first: GTM, positioning and a festive calendar mapped to your real sales cycle and business objectives.</p></article>
  <article class="scope reveal"><div class="scope__n">05</div><h3>Launches, seasonal &amp; outlet bursts</h3><p>From a Diwali gifting push to a new outlet opening, concept to live in days, with creative built per occasion.</p></article>
@@ -713,7 +819,7 @@
  <p class="h-intro reveal">One team handling the whole loop, from the strategy deck to the camera to the ad dashboard. Here's the shape of it.</p>
  <div class="pillars">
  <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 100 100"><use href="#ic-marigold"/></svg></div><h3>Always on social studio</h3><p>Feed, reels, stories and community, one brand, but a voice tuned to each region and language across every Haldiram's handle.</p></div>
- <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M4 19V5M4 19h16M8 16l4-5 3 3 5-7"/></svg></div><h3>Performance engine</h3><p>D2C conversions for haldiramsonline.com, footfall for outlets, and gifting season ROAS, with retargeting baked in.</p></div>
+ <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M4 19V5M4 19h16M8 16l4-5 3 3 5-7"/></svg></div><h3>Performance engine</h3><p>Lead generation, reach, engagement and conversion ads. D2C for haldiramsonline.com, footfall for outlets, gifting season ROAS, plus a CRM-feeding lead layer for corporate gifting, franchise and B2B. The full stack we already run for Rajdarbar, Pacompro, Golden Aces and Isthara.</p></div>
  <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="6" width="14" height="13" rx="2"/><path d="M17 10l4-2v8l-4-2"/></svg></div><h3>In house food content</h3><p>Product hero shots, Minute Khana RTE demos, namkeen close ups and sweet box gifting films, shot by our crew, not outsourced.</p></div>
  <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 100 100"><use href="#ic-laddoo"/></svg></div><h3>Festive command centre</h3><p>Diwali, Raksha Bandhan, Holi, Navratri, Ganesh Chaturthi, calendars and creative mapped to your peak sales windows.</p></div>
  <div class="pillar reveal"><div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 11l18-7-7 18-2.5-7.5z"/></svg></div><h3>Launch &amp; outlet playbooks</h3><p>New SKU launches, store openings and regional bursts, repeatable creative kits that go live in days.</p></div>
@@ -731,76 +837,382 @@
  </div>
 </section>
 
-<!-- ============ 6-MONTH PLAN ============ -->
+<!-- ============ PERFORMANCE MARKETING ============ -->
+<section class="section section--maroon" id="performance">
+ <div class="container">
+ <span class="eyebrow reveal">The performance engine</span>
+ <h2 class="h-title reveal">Ads that move the number, <span class="accent">not just the feed.</span></h2>
+ <p class="h-intro reveal">We don't pitch creative without performance. Every campaign we run carries an ad layer underneath, lead generation when the brand needs a pipeline, reach when it needs to be seen, engagement when it needs to grow, and conversion when it needs to sell. Four playbooks, all already running on our books.</p>
+
+ <h3 class="subhead reveal" style="color:var(--gold-soft);margin-top:2.6rem">The four playbooks, in plain English</h3>
+ <div class="pillars" style="margin-top:1.4rem">
+  <div class="pillar reveal" style="background:rgba(255,252,246,.06);border-color:rgba(247,200,99,.24)">
+   <div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#3F0B12;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3 5h18l-7 9v6l-4-2v-4z"/></svg></div>
+   <h3 style="color:var(--gold-soft)">Lead generation ads</h3>
+   <p style="color:rgba(251,244,231,.78)">Pipeline ads for B2B sales, franchise inquiries, real estate, food court partners, tournament signups, anything that needs to land in a CRM. We run Meta and Google lead forms, instant forms, lookalikes off your customer base. Tracked on CPL, qualified leads, MQL to SQL.</p>
+  </div>
+  <div class="pillar reveal" style="background:rgba(255,252,246,.06);border-color:rgba(247,200,99,.24)">
+   <div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#3F0B12;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="2"/><path d="M7 7c-3 3-3 7 0 10M17 7c3 3 3 7 0 10M4 4c-5 5-5 11 0 16M20 4c5 5 5 11 0 16"/></svg></div>
+   <h3 style="color:var(--gold-soft)">Reach &amp; awareness ads</h3>
+   <p style="color:rgba(251,244,231,.78)">Top-of-funnel for brand launches, new SKUs, festive pushes, city expansions and brand films. Built for scale, frequency and recall. Tracked on CPM, video views, view-through rates and brand search lift.</p>
+  </div>
+  <div class="pillar reveal" style="background:rgba(255,252,246,.06);border-color:rgba(247,200,99,.24)">
+   <div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#3F0B12;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M12 21s-7-5-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6-7 11-7 11z"/></svg></div>
+   <h3 style="color:var(--gold-soft)">Engagement &amp; community ads</h3>
+   <p style="color:rgba(251,244,231,.78)">Follower growth, post amplification, profile-visit campaigns. Turns scrollers into followers and followers into super-fans. Tracked on cost per follower, engagement rate, save and share velocity.</p>
+  </div>
+  <div class="pillar reveal" style="background:rgba(255,252,246,.06);border-color:rgba(247,200,99,.24)">
+   <div class="pillar__ic"><svg viewBox="0 0 24 24" style="fill:none;stroke:#3F0B12;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"><path d="M3 6h2l3 12h12l2-8H6"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg></div>
+   <h3 style="color:var(--gold-soft)">Conversion &amp; sales ads</h3>
+   <p style="color:rgba(251,244,231,.78)">Bottom-of-funnel for D2C purchases, sign-ups, app installs, online sales. Built around the cart, the catalogue and retargeting pools. Tracked on ROAS, CPA, AOV and repeat purchase rate.</p>
+  </div>
+ </div>
+
+ <h3 class="subhead reveal" style="color:var(--gold-soft);margin-top:3rem">Brands we already run performance for</h3>
+ <div class="proofs">
+  <div class="proof reveal">
+   <h4 class="proof__brand">Golden Aces</h4>
+   <p class="proof__stat">50K+ main · 5K+ each city page</p>
+   <p class="proof__what"><b>Lead generation</b> ads for tournament signups across markets. <b>Reach + engagement</b> campaigns that grew the main page past 50K and built a 5K+ following on every city page we launched.</p>
+  </div>
+  <div class="proof reveal">
+   <h4 class="proof__brand">Rajdarbar Reality</h4>
+   <p class="proof__stat">Real estate sales pipeline</p>
+   <p class="proof__what"><b>Lead generation</b> ads for property inquiries. Geo-targeted to high-intent buyers, qualified at the form stage, fed straight to the sales team. A pipeline, not just impressions.</p>
+  </div>
+  <div class="proof reveal">
+   <h4 class="proof__brand">Pacompro</h4>
+   <p class="proof__stat">Franchise leads + product sales</p>
+   <p class="proof__what">Two funnels running in parallel. <b>Lead generation</b> ads to build the franchise partner network, plus <b>conversion ads</b> driving online product sales. The full performance loop in one account.</p>
+  </div>
+  <div class="proof reveal">
+   <h4 class="proof__brand">Isthara Food Courts</h4>
+   <p class="proof__stat">Food court partner inquiries</p>
+   <p class="proof__what"><b>Lead generation</b> ads for food court partner sign-ups across cities, with the social engine you've already seen above. The leads behind the case study.</p>
+  </div>
+ </div>
+ <p class="more-startups reveal">+ many more startups across food, retail, real estate and services.</p>
+
+ <div class="lives-at reveal" style="margin-top:2.4rem">
+  <span><b>For Haldiram's, all four playbooks run at once:</b></span>
+  <span style="flex:1;min-width:260px">Lead ads for corporate gifting and franchise inquiries. Reach for the brand film. Engagement for handle growth across all five. Conversion for haldiramsonline.com, and the gifting season ROAS push.</span>
+ </div>
+ </div>
+</section>
+
+<!-- ============ CAMPAIGN ARCHITECTURE ============ -->
+<section class="section section--tint" id="campaigns">
+ <div class="container">
+ <span class="eyebrow reveal">The big idea</span>
+ <h2 class="h-title reveal">Three campaigns. <span class="accent">One brand.</span></h2>
+ <p class="h-intro reveal">A brand the size of Haldiram's doesn't need one campaign. It needs an architecture, a brand platform that lives forever, and two product platforms that own their categories. Each one ladders up to a Haldiram's truth no competitor can claim. Each one runs on a specific handle. None of them borrow the shape of "kuch meetha ho jaye" or "khushiyan ho toh Haldiram's." This is sentences only Haldiram's can say.</p>
+
+ <div class="arch">
+  <div class="arch-card reveal">
+   <span class="arch-card__n">Campaign 01 · Brand platform</span>
+   <h3 class="arch-card__line">Bas ek aur.</h3>
+   <p class="arch-card__role">The line every Indian has already said.</p>
+   <p class="arch-card__what">Nobody eats one bhujia. One kaju katli. One mathri. The hand always goes back. Ninety years of one more. Festive lockups: <b>Bas ek aur box</b> (Diwali) and <b>Bas ek aur bite</b> (Rakhi).</p>
+   <p class="arch-card__handles"><b>Anchors:</b> @haldirams.official · echoes across all five</p>
+  </div>
+  <div class="arch-card reveal">
+   <span class="arch-card__n">Campaign 02 · Snacks</span>
+   <h3 class="arch-card__line">Hindustan ka Crunch.</h3>
+   <p class="arch-card__role">The sound only India makes when she eats.</p>
+   <p class="arch-card__what">From bhujia to wafers to mathri to chana jor garam, every Haldiram's snack lives on one thing, the kadak. We own the sound. Sound-led, reels-first, ASMR by design.</p>
+   <p class="arch-card__handles"><b>Anchors:</b> @haldirams_snacks · echoes on @haldiraminternational</p>
+  </div>
+  <div class="arch-card reveal">
+   <span class="arch-card__n">Campaign 03 · Packaged meals</span>
+   <h3 class="arch-card__line">Bhook lagi? Haldiram's hai na.</h3>
+   <p class="arch-card__role">India doesn't have meal times. India has hunger times.</p>
+   <p class="arch-card__what">9pm guests. 2am hostel hunger. Train delays. Post-flight cravings. There's one answer to every "what now?" moment, and it's the Minute Khana shelf, the freezer, the packet.</p>
+   <p class="arch-card__handles"><b>Anchors:</b> @haldirams.official (RTE) · @haldirams_restaurants (dine-in)</p>
+  </div>
+ </div>
+ </div>
+</section>
+
+<!-- ============ CAMPAIGN 01: BAS EK AUR ============ -->
+<section class="section section--dark" id="bas-ek-aur">
+ <div class="container">
+ <span class="eyebrow reveal">Campaign 01 · The brand film</span>
+ <h2 class="camp-title reveal">Bas ek aur.</h2>
+ <p class="camp-sub reveal">A 90-second brand film. One sentence every Indian has already said about Haldiram's. We're not coining it. We're naming what's been there since 1937, and giving it the film it deserves.</p>
+
+ <h3 class="subhead reveal" style="color:var(--gold-soft);margin-top:2.4rem">The voiceover script</h3>
+ <div class="manifesto reveal">
+  <p>Nobody has ever eaten one piece of bhujia. One kaju katli. One mathri. The hand always goes back. <em>Always.</em></p>
+  <p>From the office colleague who "just samples" your dabba, to the diet uncle who says "kal se pakka, promise", to the kid sneaking to dadi's tin at midnight, only one brand makes every Indian say the same three words out loud.</p>
+  <p><b>Bas ek aur. Bas ek aur. Bas ek aur.</b></p>
+  <p>Ninety years of one more.</p>
+ </div>
+
+ <h3 class="subhead reveal">The film, scene by scene</h3>
+ <p class="reveal" style="font-size:.98rem;color:rgba(251,244,231,.78);margin-top:.5rem;line-height:1.55;max-width:68ch">One film. Ten Indian moments. The voiceover above runs continuous, the camera weaves through these ten vignettes, each one only a few seconds long, each one a different Haldiram's reach. Black frame open, the line, the ninety-year mark, end.</p>
+ <div class="films">
+  <div class="film reveal"><span class="film__n">Open</span><h4 class="film__name">Black frame. Sound only.</h4><p class="film__what">Faint crackle of bhujia. The first three words of the voiceover. Then the first cut.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 01</span><h4 class="film__name">The Office Dabba</h4><p class="film__what">Colleague hovers over your tiffin. "Bas ek aur try kar lo, daal mein hi toh hai." Cut to: tiffin empty.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 02</span><h4 class="film__name">Dadi's Almirah at Midnight</h4><p class="film__what">Kid sneaks to the bhujia tin. Dadi's already there. They lock eyes. Both reach in. Bas ek aur.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 03</span><h4 class="film__name">Diet Uncle, Kal Se Pakka</h4><p class="film__what">Treadmill on, mathri in hand, wife filming. "Bas ek aur, kal se pakka, promise." Cut to next morning. Same scene.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 04</span><h4 class="film__name">The Bride and the Chaat Counter</h4><p class="film__what">Her own wedding. The chaat counter knows her order. She keeps going back, lehenga and all. Groom watches, smiling, defeated.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 05</span><h4 class="film__name">The Care Package</h4><p class="film__what">Mom in Delhi packs a Haldiram's box for the son in NYC. Video call. He's already opened it. "Bas ek aur khaa le, bachega kya?"</p></div>
+  <div class="film reveal"><span class="film__n">Scene 06</span><h4 class="film__name">The Rajdhani Express</h4><p class="film__what">Family opens one packet. Every co-passenger reaches in. Strangers become bas ek aur friends. By Bhopal, the packet is empty.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 07</span><h4 class="film__name">The Zoom Mute</h4><p class="film__what">Camera on, mic off, hand sneaking to the bhujia packet during a board review. We've all been there. The CFO is on mute too.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 08</span><h4 class="film__name">The IPL Wicket</h4><p class="film__what">Every wicket = bas ek aur namkeen. Every sixer = bas ek aur. Match ends in a super over. Packet ends three overs in.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 09</span><h4 class="film__name">The Diwali Box</h4><p class="film__what">Family dinner. Box opened. Every relative says "bas ek aur." Box empty in twelve minutes. The setup for the cutdown below.</p></div>
+  <div class="film reveal"><span class="film__n">Scene 10</span><h4 class="film__name">The Family Dog</h4><p class="film__what">Even the family dog sits patient and unblinking by the kaju katli plate. Tail wagging. A single piece left. The dog wins.</p></div>
+  <div class="film reveal"><span class="film__n">End</span><h4 class="film__name">"Bas ek aur."</h4><p class="film__what">Black frame. The line, white type, centre. Below it: "Haldiram's. Ninety years of one more." Logo. Cut.</p></div>
+ </div>
+
+ <h3 class="subhead reveal" style="margin-top:2.6rem">Two 30-second cutdowns, from the same film</h3>
+ <p class="reveal" style="font-size:.98rem;color:rgba(251,244,231,.78);margin-top:.5rem;line-height:1.55;max-width:68ch">Built from the same footage, the same voiceover treatment, the same end frame. Two lockups that arrive on schedule, every year, the same week the brand wants to dominate.</p>
+ <div class="lockups">
+  <div class="lockup reveal">
+   <span class="lockup__tag">Diwali cutdown</span>
+   <h3 class="lockup__line">Bas ek aur box.</h3>
+   <p class="lockup__note">Pulls scenes 05 and 09 (the care package, the Diwali dinner). Closes on "Bas ek aur box," then the Haldiram's gift box hero, then the line. The gifting season's anthem, lifted from the brand film, ready in 30 seconds.</p>
+  </div>
+  <div class="lockup reveal">
+   <span class="lockup__tag">Rakhi cutdown</span>
+   <h3 class="lockup__line">Bas ek aur bite.</h3>
+   <p class="lockup__note">Pulls scene 04 (the bride at the chaat counter) and a fresh shoot of a brother reaching across the Rakhi thaali. Closes on "Bas ek aur bite," then the kaju katli hero, then the line. The Rakhi spot the category doesn't have yet.</p>
+  </div>
+ </div>
+
+ <div class="lives-at reveal">
+  <span><b>Anchors on:</b></span>
+  <span class="lives-at__h">@haldirams.official</span>
+  <span><b>Echoes on:</b></span>
+  <span class="lives-at__h">@haldirams_snacks</span>
+  <span class="lives-at__h">@haldirams_restaurants</span>
+  <span class="lives-at__h">@haldirams_nagpur</span>
+  <span class="lives-at__h">@haldiraminternational</span>
+ </div>
+ </div>
+</section>
+
+<!-- ============ CAMPAIGN 02: HINDUSTAN KA CRUNCH ============ -->
+<section class="section" id="hindustan-ka-crunch">
+ <div class="container">
+ <span class="eyebrow reveal">Campaign 02 · The snacks platform</span>
+ <h2 class="camp-title reveal" style="color:var(--maroon)">Hindustan ka Crunch.</h2>
+ <p class="camp-sub reveal">A sound-led platform for the snacks lane. Aloo bhujia, wafers, mathri, chana, every product Haldiram's makes that <em>kadak</em>s in your teeth.</p>
+
+ <div class="manifesto reveal">
+  <p>There's a sound only India makes when she eats. <em>Kadak.</em> That tiny moment between teeth meeting bhujia and bhujia surrendering. The snap of mathri. The crackle of chana jor garam.</p>
+  <p>From Bikaner to Bengaluru, Boston to Bahrain, that sound is India.</p>
+  <p><b>Haldiram's built it. Haldiram's owns it.</b></p>
+  <p>Hindustan ka Crunch.</p>
+ </div>
+
+ <h3 class="subhead reveal">The content territory, sound-on by design</h3>
+ <div class="films">
+  <div class="film reveal"><span class="film__n">Idea 01</span><h4 class="film__name">The Sound Test</h4><p class="film__what">Pin-drop silent studio. One bite. The mic captures the kadak. No music, no VO, just the snap. Hero asset for the launch reel.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 02</span><h4 class="film__name">Crunch Cities</h4><p class="film__what">Same bhujia, eaten in Mumbai, Chennai, Lucknow, Imphal, Kochi. Same crunch, different cities, same sound. A weekly series.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 03</span><h4 class="film__name">The 30-Day Crunch</h4><p class="film__what">Day 1 vs Day 30 from the same packet. Same crunch. Slow-mo. Audio comparison. The shelf-life flex, packaged as a film.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 04</span><h4 class="film__name">Guess the Snack</h4><p class="film__what">Audio-only reels. Bhujia? Mathri? Wafer? Comment to guess. Engagement bait, but the kadak earns the comment.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 05</span><h4 class="film__name">The Crunch Off</h4><p class="film__what">Haldiram's vs the unbranded imitator. Sound-on test. You'll hear which is which before you see it. We don't say it. The audio does.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 06</span><h4 class="film__name">Crunch in Every Language</h4><p class="film__what">Bhujia eaters across India calling out the sound in their own language. Kadak, mokra, parukh, karkar, kurkure. One crunch, many words.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 07</span><h4 class="film__name">Crunchy History</h4><p class="film__what">1937 Bikaner kitchen. Same recipe, same crunch, ninety years later. Heritage delivered in a snap, not a long film.</p></div>
+  <div class="film reveal"><span class="film__n">Idea 08</span><h4 class="film__name">The ASMR Edit</h4><p class="film__what">Full mic, no music, slow-mo wafer snap, mathri break, chana crackle. A monthly cinematic for the sound-led feed.</p></div>
+ </div>
+
+ <h3 class="subhead reveal" style="margin-top:2.4rem">The product range it carries</h3>
+ <div class="products reveal">
+  <span class="product-chip">Aloo Bhujia</span>
+  <span class="product-chip">Bhujia Sev</span>
+  <span class="product-chip">Moong Dal Namkeen</span>
+  <span class="product-chip">Khatta Meetha</span>
+  <span class="product-chip">Aloo Lachha</span>
+  <span class="product-chip">Wafers</span>
+  <span class="product-chip">Mathri</span>
+  <span class="product-chip">Khakhra</span>
+  <span class="product-chip">Chana Jor Garam</span>
+  <span class="product-chip">Chivda</span>
+ </div>
+
+ <div class="lives-at reveal">
+  <span><b>Anchors on:</b></span>
+  <span class="lives-at__h">@haldirams_snacks</span>
+  <span><b>Echoes on:</b></span>
+  <span class="lives-at__h">@haldiraminternational</span>
+  <span class="lives-at__h">@haldirams_nagpur</span>
+ </div>
+ </div>
+</section>
+
+<!-- ============ CAMPAIGN 03: BHOOK LAGI? ============ -->
+<section class="section section--maroon" id="bhook-lagi">
+ <div class="container">
+ <span class="eyebrow reveal">Campaign 03 · The packaged meals platform</span>
+ <h2 class="camp-title reveal">Bhook lagi? <span class="accent">Haldiram's hai na.</span></h2>
+ <p class="camp-sub reveal">A platform for Minute Khana, frozen and the ready-to-eat shelf. Shahi paneer, dal makhani, chole, rajma, biryani, every reach-for-it-now product the brand makes.</p>
+
+ <div class="manifesto reveal">
+  <p>India doesn't have meal times. India has hunger times.</p>
+  <p>Hunger at 9pm when guests show up. Hunger at 2am when the hostel kitchen's shut. Hunger on the train when the pantry car never comes. Hunger after a 12-hour flight. Hunger after a fight with your mother. Hunger when you don't even know why you're hungry.</p>
+  <p>There is exactly one answer to all of it. A pantry, a freezer, a packet, ninety seconds.</p>
+  <p><b>Bhook lagi? Haldiram's hai na.</b></p>
+ </div>
+
+ <h3 class="subhead reveal" style="color:var(--gold-soft)">The hunger moments, eight situations to start</h3>
+ <div class="films">
+  <div class="film reveal"><span class="film__n">Moment 01</span><h4 class="film__name">9pm, Surprise Guests</h4><p class="film__what">Relatives at the door without notice. Fridge empty. Cabinet has Minute Khana shahi paneer. Six minutes later, full thaali. Reputation intact.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 02</span><h4 class="film__name">The Hostel 2am</h4><p class="film__what">Hostel mess shut. Canteen closed. Roommate slides over a Minute Khana chole bhature. The microwave knows what to do.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 03</span><h4 class="film__name">The Train Pantry</h4><p class="film__what">Rajdhani running four hours late. Pantry car never showed. You open your bag. Dal makhani, rajma, biryani. Strangers watch jealously.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 04</span><h4 class="film__name">The WFH Lunch Break</h4><p class="film__what">Call ends at 1:00. Next call at 1:15. Minute Khana, microwave, plate. You log back on with food, not excuses.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 05</span><h4 class="film__name">The Bachelor Rajma</h4><p class="film__what">Tried to make it from scratch. Burnt the pressure cooker. Roommate quietly tears open a Minute Khana. Reality, acknowledged.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 06</span><h4 class="film__name">The Post-Fight Peace</h4><p class="film__what">Fought with mom. Sulking in the room. Door creaks open. Plate slides in. Minute Khana chole. The closest thing to an apology in this house.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 07</span><h4 class="film__name">The 3am Landing</h4><p class="film__what">12-hour flight. Landed Delhi 3am. Nothing's open, even the swiggy delivery is shut. Pantry has Haldiram's. Welcome home, actually.</p></div>
+  <div class="film reveal"><span class="film__n">Moment 08</span><h4 class="film__name">The Cricket Match</h4><p class="film__what">India batting at 7pm. No time to cook. Minute Khana plus remote = match-day setup. Toss done in less time than the dal.</p></div>
+ </div>
+
+ <h3 class="subhead reveal" style="margin-top:2.4rem;color:var(--gold-soft)">The product range it carries</h3>
+ <div class="products reveal">
+  <span class="product-chip">Shahi Paneer</span>
+  <span class="product-chip">Dal Makhani</span>
+  <span class="product-chip">Chole</span>
+  <span class="product-chip">Rajma</span>
+  <span class="product-chip">Pav Bhaji</span>
+  <span class="product-chip">Biryani</span>
+  <span class="product-chip">Khichdi</span>
+  <span class="product-chip">Pulao</span>
+  <span class="product-chip">Frozen Samosa</span>
+  <span class="product-chip">Frozen Kachori</span>
+ </div>
+
+ <div class="lives-at reveal">
+  <span><b>Anchors on:</b></span>
+  <span class="lives-at__h">@haldirams.official</span>
+  <span><b>Dine-in interpretation on:</b></span>
+  <span class="lives-at__h">@haldirams_restaurants</span>
+ </div>
+ </div>
+</section>
+
+<!-- ============ 6-MONTH PLAN, BY HANDLE ============ -->
 <section class="section section--tint" id="plan">
  <div class="container">
- <span class="eyebrow reveal">The roadmap</span>
- <h2 class="h-title reveal">A 6-month content plan, <span class="accent">month by month.</span></h2>
- <p class="h-intro reveal">Mapped to your real selling season, monsoon snacking through the Diwali gifting peak into the winter range. Each month blends always on social, festive moment marketing, in house shoots and performance, with a clear goal attached.</p>
+ <span class="eyebrow reveal">The 6-month roadmap</span>
+ <h2 class="h-title reveal">A 6-month plan, <span class="accent">by handle.</span></h2>
+ <p class="h-intro reveal">Each handle leads with one of the three campaigns, alongside the festive moments. So a follower on @haldirams_snacks gets the crunch story, a follower on @haldirams_restaurants gets the dine-in story, and the main handle anchors the brand film and the Minute Khana hunger moments. Each month carries a clear theme and a deliverable.</p>
  <div class="rm-note reveal">
- <span><b>Always on every month:</b> daily stories, community replies, reels cadence, and an ad engine running underneath.</span>
+ <span><b>Always on, every handle, every month:</b> daily stories, community replies, reels-first cadence and an ad engine running underneath.</span>
  </div>
 
- <div class="roadmap">
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 01</span><span class="rm__mo">July</span></div>
- <div>
- <h3 class="rm__theme">Foundation &amp; brand voice</h3>
- <p class="rm__focus">Lock the brand voice, regional language guidelines, content pillars and grid look. Kick off with monsoon snacking, chai pakora and "barish + bhujia" cravings, while we set the performance baseline.</p>
- <div class="rm__chips"><span class="rm__chip">Brand voice reels</span><span class="rm__chip">Monsoon snacking</span><span class="rm__chip">Product hero shoot</span><span class="rm__chip">Grid reset</span><span class="rm__chip">Ad account setup</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: establish identity + baseline reach and engagement benchmarks.</p>
- </div>
- </div>
+ <div class="tracks">
 
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 02</span><span class="rm__mo">August</span></div>
- <div>
- <h3 class="rm__theme">Rakhi &amp; Independence Day gifting</h3>
- <p class="rm__focus">First big gifting moment. Sweet box and hamper storytelling (kaju katli, soan papdi) for Raksha Bandhan, plus a "taste of India" Independence Day push driving haldiramsonline.com.</p>
- <div class="rm__chips"><span class="rm__chip">Rakhi hampers</span><span class="rm__chip">Gifting carousels</span><span class="rm__chip">I Day campaign</span><span class="rm__chip">D2C conversion ads</span><span class="rm__chip">Influencer seeding</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: first measurable gifting ROAS + festive reach spike.</p>
- </div>
- </div>
+  <!-- TRACK 01: @haldirams.official -->
+  <div class="track reveal">
+   <div class="track__head">
+    <div>
+     <span class="track__role">Track 01 · Main flagship</span>
+     <h3 class="track__handle">@haldirams.official</h3>
+    </div>
+    <div class="track__camp">
+     <span class="track__camp__lbl">Leads with</span>
+     <b>Bas ek aur</b> (brand film) + <b>Bhook lagi? Haldiram's hai na</b> (Minute Khana)
+    </div>
+   </div>
+   <div class="track__months">
+    <div class="month"><div class="month__head"><span class="month__m">Jul</span><span class="month__mo">M01</span></div><p class="month__txt"><b>Manifesto film launch.</b> "Bas ek aur" hero film + 6s cutdowns. Monsoon Minute Khana pakora moments.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Aug</span><span class="month__mo">M02</span></div><p class="month__txt"><b>"Bas ek aur bite" launches</b> for Rakhi. I-Day cut: "75 saal of one more." UGC engine live.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Sep</span><span class="month__mo">M03</span></div><p class="month__txt"><b>"Bas ek aur modak"</b> for Ganesh. Daily Minute Khana RTE demos. Diwali audience warmup.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Oct</span><span class="month__mo">M04</span></div><p class="month__txt"><b>Vrat-friendly Minute Khana</b> for Navratri. "Bhook lagi? Vrat hai? Hai na." Diwali film teasers.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Nov</span><span class="month__mo">M05</span></div><p class="month__txt"><b>"Bas ek aur box" Diwali campaign</b> at full scale. Corporate gifting push, D2C ROAS peak.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Dec</span><span class="month__mo">M06</span></div><p class="month__txt"><b>"Bas ek aur saal"</b> year-in-cravings recap film. Winter Bhook lagi? menu. New Year anthem.</p></div>
+   </div>
+  </div>
 
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 03</span><span class="rm__mo">September</span></div>
- <div>
- <h3 class="rm__theme">Ganesh Chaturthi, Onam &amp; everyday</h3>
- <p class="rm__focus">Regional festival creative (modak moment, Onam sadhya) alongside Minute Khana ready to eat demos for daily relevance. Begin warming up the audience for Diwali gifting.</p>
- <div class="rm__chips"><span class="rm__chip">Festival creative</span><span class="rm__chip">RTE demos</span><span class="rm__chip">Recipe reels</span><span class="rm__chip">Diwali teaser</span><span class="rm__chip">Retargeting pools</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: build warm audiences &amp; product trial ahead of peak.</p>
- </div>
- </div>
+  <!-- TRACK 02: @haldirams_snacks -->
+  <div class="track reveal">
+   <div class="track__head">
+    <div>
+     <span class="track__role">Track 02 · Snacks &amp; sweets</span>
+     <h3 class="track__handle">@haldirams_snacks</h3>
+    </div>
+    <div class="track__camp">
+     <span class="track__camp__lbl">Leads with</span>
+     <b>Hindustan ka Crunch</b> (sound-led snacks platform)
+    </div>
+   </div>
+   <div class="track__months">
+    <div class="month"><div class="month__head"><span class="month__m">Jul</span><span class="month__mo">M01</span></div><p class="month__txt"><b>"Hindustan ka Crunch" launch</b> with a 6-product sound reel. Bhujia ASMR. Mathri snap.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Aug</span><span class="month__mo">M02</span></div><p class="month__txt"><b>Tricolour Crunch</b> for I-Day (three regional namkeens). Rakhi sweets storytelling.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Sep</span><span class="month__mo">M03</span></div><p class="month__txt"><b>Crunch Cities series</b> begins. Onam banana chips push. Ganesh laddoo close-ups.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Oct</span><span class="month__mo">M04</span></div><p class="month__txt"><b>Vrat Crunch</b> — sabudana, makhana. Wafer × Diwali movie-night content. Heavy reels output.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Nov</span><span class="month__mo">M05</span></div><p class="month__txt"><b>Sweets gifting hero</b> — kaju katli, soan papdi, namkeen hamper films. Diwali conversion ads.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Dec</span><span class="month__mo">M06</span></div><p class="month__txt"><b>Winter crunch</b> — gajak, gur rewri. "Crunch of the year" recap. New Year handover.</p></div>
+   </div>
+  </div>
 
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 04</span><span class="rm__mo">October</span></div>
- <div>
- <h3 class="rm__theme">Navratri, Dussehra &amp; Diwali build up</h3>
- <p class="rm__focus">Vrat friendly and fasting snack ranges for Navratri, Dussehra moments, then the Diwali gifting blitz opens, hamper hero films, tin sweet showcases and a heavy retargeting layer.</p>
- <div class="rm__chips"><span class="rm__chip">Vrat snacks</span><span class="rm__chip">Hamper hero films</span><span class="rm__chip">Gift finder content</span><span class="rm__chip">Outlet promos</span><span class="rm__chip">Performance scale up</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: maximise gifting consideration before the Diwali rush.</p>
- </div>
- </div>
+  <!-- TRACK 03: @haldirams_restaurants -->
+  <div class="track reveal">
+   <div class="track__head">
+    <div>
+     <span class="track__role">Track 03 · Restaurants</span>
+     <h3 class="track__handle">@haldirams_restaurants</h3>
+    </div>
+    <div class="track__camp">
+     <span class="track__camp__lbl">Leads with</span>
+     <b>Bhook lagi? Haldiram's hai na</b> (dine-in) + <b>Bas ek aur</b> (experience cuts)
+    </div>
+   </div>
+   <div class="track__months">
+    <div class="month"><div class="month__head"><span class="month__m">Jul</span><span class="month__mo">M01</span></div><p class="month__txt"><b>Monsoon menu</b> + "Bhook lagi? Restaurant hai na" hyperlocal reels per outlet.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Aug</span><span class="month__mo">M02</span></div><p class="month__txt"><b>Rakhi family dine-in films.</b> I-Day thaali specials. Outlet-level UGC.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Sep</span><span class="month__mo">M03</span></div><p class="month__txt"><b>Festival thaalis</b> (Ganesh, Onam). "Bas ek aur plate" ambience cinematics begin.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Oct</span><span class="month__mo">M04</span></div><p class="month__txt"><b>Navratri thaalis.</b> Pre-Diwali office party bookings. Late-night "Bhook lagi?" reels.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Nov</span><span class="month__mo">M05</span></div><p class="month__txt"><b>Corporate Diwali parties</b> bookings push. Post-Diwali wedding catering reels.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Dec</span><span class="month__mo">M06</span></div><p class="month__txt"><b>Winter menu launches.</b> New Year dinner promo reels. Outlet-by-outlet scorecard.</p></div>
+   </div>
+  </div>
 
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 05</span><span class="rm__mo">November</span></div>
- <div>
- <h3 class="rm__theme">Diwali peak &amp; wedding season</h3>
- <p class="rm__focus">The big conversion month: last mile gifting ads, corporate gifting angle, countdown urgency. Post Diwali we roll into "treat yourself" and early wedding season gifting.</p>
- <div class="rm__chips"><span class="rm__chip">Gift hamper push</span><span class="rm__chip">Corporate gifting</span><span class="rm__chip">Countdown reels</span><span class="rm__chip">Conversion + ROAS</span><span class="rm__chip">Wedding gifting</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: hit the year's peak D2C + outlet sales window.</p>
- </div>
- </div>
+  <!-- TRACK 04: @haldirams_nagpur -->
+  <div class="track reveal">
+   <div class="track__head">
+    <div>
+     <span class="track__role">Track 04 · Regional flagship</span>
+     <h3 class="track__handle">@haldirams_nagpur</h3>
+    </div>
+    <div class="track__camp">
+     <span class="track__camp__lbl">Leads with</span>
+     All three campaigns, in <b>Marathi + heritage voice</b> (the 1937 angle)
+    </div>
+   </div>
+   <div class="track__months">
+    <div class="month"><div class="month__head"><span class="month__m">Jul</span><span class="month__mo">M01</span></div><p class="month__txt"><b>Local "Bas ek aur"</b> with Marathi voiceover. Cadence reset, fewer sharper posts.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Aug</span><span class="month__mo">M02</span></div><p class="month__txt"><b>"Nagpur ki kaju katli, 1937 se"</b> Rakhi heritage angle. I-Day with regional pride.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Sep</span><span class="month__mo">M03</span></div><p class="month__txt"><b>Ganesh Chaturthi peak</b> — Maharashtra's festival, the brand's moment. Factory modak backstory.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Oct</span><span class="month__mo">M04</span></div><p class="month__txt"><b>Navratri Garba</b> content. Heritage Diwali build, "the original Haldiram's" push.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Nov</span><span class="month__mo">M05</span></div><p class="month__txt"><b>"Same swaad since 1937."</b> Heritage gifting reels. Diwali conversion.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Dec</span><span class="month__mo">M06</span></div><p class="month__txt"><b>Winter ranges</b> + 90-year heritage recap film. Q1 plan handover.</p></div>
+   </div>
+  </div>
 
- <div class="rm reveal">
- <div class="rm__when"><span class="rm__m">Month 06</span><span class="rm__mo">December</span></div>
- <div>
- <h3 class="rm__theme">Winter specials &amp; year end</h3>
- <p class="rm__focus">Spotlight the winter range, gajak, gur, rewri, plus Christmas and New Year gifting. Close the half year with a community "year in cravings" recap and the Q1 plan.</p>
- <div class="rm__chips"><span class="rm__chip">Winter range</span><span class="rm__chip">New Year gifting</span><span class="rm__chip">UGC recap</span><span class="rm__chip">Community reels</span><span class="rm__chip">Next quarter plan</span></div>
- <p class="rm__goal"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal: sustain momentum &amp; set the roadmap for the next 6 months.</p>
- </div>
- </div>
+  <!-- TRACK 05: @haldiraminternational -->
+  <div class="track reveal">
+   <div class="track__head">
+    <div>
+     <span class="track__role">Track 05 · International / US diaspora</span>
+     <h3 class="track__handle">@haldiraminternational</h3>
+    </div>
+    <div class="track__camp">
+     <span class="track__camp__lbl">Leads with</span>
+     <b>Bas ek aur</b> (NRI care-package cut) + <b>India's Crunch</b> (Hindustan ka Crunch, exported)
+    </div>
+   </div>
+   <div class="track__months">
+    <div class="month"><div class="month__head"><span class="month__m">Jul</span><span class="month__mo">M01</span></div><p class="month__txt"><b>NRI "Bas ek aur"</b> care package film. "India's Crunch" landing. US summer BBQ + bhujia content.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Aug</span><span class="month__mo">M02</span></div><p class="month__txt"><b>Long-distance Rakhi gifting</b> films, "Bas ek aur bite, from home." I-Day for diaspora.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Sep</span><span class="month__mo">M03</span></div><p class="month__txt"><b>Early Diwali shipping push.</b> "Crunch of home" series. Cricket-season snacking ties.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Oct</span><span class="month__mo">M04</span></div><p class="month__txt"><b>NRI Diwali gifting</b> films. US corporate gifting angle. International courier ads.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Nov</span><span class="month__mo">M05</span></div><p class="month__txt"><b>US Diwali peak.</b> "Bas ek aur box, shipped with love." Thanksgiving × Haldiram's content.</p></div>
+    <div class="month"><div class="month__head"><span class="month__m">Dec</span><span class="month__mo">M06</span></div><p class="month__txt"><b>Holiday gifting overlap.</b> New Year NRI cravings recap. 2027 plan.</p></div>
+   </div>
+  </div>
+
  </div>
  </div>
 </section>
