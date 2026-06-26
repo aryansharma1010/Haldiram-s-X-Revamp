@@ -410,6 +410,27 @@
   .foot__col p,.foot__col a{font-size:.92rem;line-height:1.7;display:block}
   .foot__bar{margin-top:34px;border-top:1px solid rgba(247,200,99,.18);padding-top:18px;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;font-size:.82rem;color:rgba(251,244,231,.55)}
 
+  /* ---------- head-to-head (Rival IQ benchmark) ---------- */
+  .h2h{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:1.7rem}
+  @media(max-width:760px){.h2h{grid-template-columns:1fr}}
+  .h2h__card{background:rgba(255,252,246,.05);border:1px solid rgba(247,200,99,.22);border-radius:18px;padding:1.5rem 1.55rem 1.6rem;position:relative;overflow:hidden}
+  .h2h__card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--gold),var(--saffron))}
+  .h2h__plat{font-family:'Bricolage Grotesque';font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+  .h2h__date{font-size:.72rem;color:rgba(251,244,231,.5);margin:.18rem 0 1.1rem;line-height:1.4}
+  .h2h__metric{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(251,244,231,.58);text-align:center;margin-bottom:.55rem}
+  .h2h__duel{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:start}
+  .h2h__side{text-align:center}
+  .h2h__val{font-family:'Bricolage Grotesque';font-weight:800;font-size:clamp(1.9rem,5vw,2.6rem);line-height:1;font-variant-numeric:tabular-nums;color:rgba(251,244,231,.4)}
+  .h2h__side--win .h2h__val{color:var(--gold-soft)}
+  .h2h__brand{font-size:.8rem;font-weight:700;margin-top:.4rem;color:rgba(251,244,231,.72)}
+  .h2h__side--win .h2h__brand{color:#ffe1b3}
+  .h2h__win{display:inline-block;font-size:.57rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--maroon-deep);background:var(--gold-soft);border-radius:5px;padding:.1rem .42rem;margin-top:.4rem}
+  .h2h__vs{font-family:'Bricolage Grotesque';font-weight:800;font-size:.78rem;color:rgba(251,244,231,.38);padding-top:.6rem}
+  .h2h__sub{display:flex;justify-content:space-between;gap:10px;margin-top:1.05rem;padding-top:.85rem;border-top:1px solid rgba(247,200,99,.14);font-size:.75rem;color:rgba(251,244,231,.6);line-height:1.45}
+  .h2h__sub b{color:rgba(251,244,231,.85);font-weight:700}
+  .h2h__verdict{margin:.95rem 0 0;font-size:.86rem;color:rgba(251,244,231,.8);line-height:1.5}
+  .h2h__verdict b{color:var(--gold-soft);font-weight:700}
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
@@ -892,7 +913,7 @@
 
  <h3 class="subhead reveal" style="color:var(--gold-soft);margin-top:2.8rem">The eight handles, and what we'd change on each</h3>
  <div class="buckets">
- <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">INDIA · FLAGSHIP</span><h4 class="bucket__name">@haldirams.official</h4></div><p class="bucket__what">The master brand, festive films, big campaigns, the corporate face, and the storytelling genuinely works.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>Strong equity and festive storytelling, exactly as is.<br><span class="ps ps--p">Bio</span>"One-stop destination for your food cravings" is too generic, and it links only Swiggy when you're on Zomato too. Swap in one link that opens every platform, Swiggy, Zomato and the D2C store.<br><span class="ps ps--p">Highlights</span>Make the highlight covers a map of your footprint, one circle per country Haldiram's is in.<br><span class="ps ps--p">Covers</span>Every new-outlet reel should put the exact location on the cover, so the grid itself tells people where the store just opened.<br><span class="ps ps--p">UGC</span>Collabs read as paid ads. Brief creators to play, e.g. Ayush Sapra takes the summer menu as a challenge, "I'll try every dish and find the best." Product woven in, not announced.</p></div>
+ <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">INDIA · FLAGSHIP</span><h4 class="bucket__name">@haldirams.official</h4></div><p class="bucket__what">The master brand, festive films, big campaigns, the corporate face, and the storytelling genuinely works.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>Strong equity and festive storytelling, exactly as is.<br><span class="ps ps--p">Bio</span>"One-stop destination for your food cravings" is too generic, and it links only Swiggy when you're on Zomato too. Swap in one link that opens every platform, Swiggy, Zomato and the D2C store.<br><span class="ps ps--p">Highlights</span>Make the highlight covers a map of your footprint, one circle per country Haldiram's is in.<br><span class="ps ps--p">Covers</span>Every new-outlet reel should put the exact location and a clear one-line message on the cover, so the grid itself tells people where the store just opened.<br><span class="ps ps--p">UGC</span>Collabs read as paid ads. Brief creators to play, e.g. Ayush Sapra takes the summer menu as a challenge, "I'll try every dish and find the best." Product woven in, not announced.</p></div>
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">INDIA · PRODUCT</span><h4 class="bucket__name">@haldirams_snacks</h4></div><p class="bucket__what">The snacking handle, bhujia, namkeen, RTE, the everyday craving.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>An infinite, reel-native product library.<br><span class="ps ps--p">Lane</span>It's posting the same snack content as @haldiraminternational. Keep this handle the pure product-and-craving engine, and hand the geography story across to International.</p></div>
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">GLOBAL · EXPORT</span><h4 class="bucket__name">@haldiraminternational</h4></div><p class="bucket__what">The diaspora and 80-country export story.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>A real reason to exist as the brand goes global.<br><span class="ps ps--p">Place</span>Stop reposting the same snacks as @haldirams_snacks. This handle's only job is place, which countries Haldiram's is in and exactly where to find the stores and products. Every post should answer "where can I get it."</p></div>
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">INDIA · DINE-IN</span><h4 class="bucket__name">@haldirams_restaurants</h4></div><p class="bucket__what">The QSR and restaurant handle, menu, dining, footfall. Overall it looks good.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>Solid feed and a clear footfall job.<br><span class="ps ps--p">Copy</span>Some static posts just label the dish over a photo. A brand this size can write witty, characterful copy on every one.<br><span class="ps ps--p">Chefs</span>Far too few chef posts. The people behind the counter are magnetic, the cake-section chef at the Gurgaon outlet alone can hold a camera instantly. Put the chefs on screen.</p></div>
@@ -900,6 +921,45 @@
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">UK · MARKET</span><h4 class="bucket__name">@haldiramsuk</h4></div><p class="bucket__what">The UK retail and diaspora handle. Looks good.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>Genuinely solid for the market.<br><span class="ps ps--p">Chefs</span>Same gap as the India dine-in handle, bring in far more chef-led content.</p></div>
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">UK · DINE-IN</span><h4 class="bucket__name">@haldiramsuk.restaurants</h4></div><p class="bucket__what">UK restaurant footfall and the dine-in experience.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>Hyper-local intent, the people most likely to walk in.<br><span class="ps ps--p">Cadence</span>The thinnest of the eight, it needs a steady local rhythm of store, event and chef content so it doesn't drift toward dormancy.</p></div>
  <div class="bucket reveal"><div class="bucket__top"><span class="bucket__n">UAE · MARKET</span><h4 class="bucket__name">@haldiramsuae</h4></div><p class="bucket__what">The Gulf handle, retail, dining and high-value diaspora.</p><p class="bucket__ps"><span class="ps ps--s">Keep</span>One of the richest diaspora markets on earth.<br><span class="ps ps--p">Fix</span>Under-leveraged, Ramadan and Eid gifting alone should make this a powerhouse handle.</p></div>
+ </div>
+
+ <h3 class="subhead reveal" style="color:var(--gold-soft);margin-top:2.8rem">Head-to-head: Haldiram's vs Bikanervala</h3>
+ <p class="reveal" style="margin-top:.4rem;font-size:.95rem;color:rgba(251,244,231,.78);max-width:66ch">We ran both brands through Rival IQ for the same two weeks. The split is the whole story, one platform you're quietly winning, the other you're clearly not.</p>
+ <div class="h2h">
+  <div class="h2h__card reveal">
+   <div class="h2h__plat">Instagram</div>
+   <div class="h2h__date">Jun 12&ndash;26, 2026 · @haldirams.official vs @bikanervala.in</div>
+   <div class="h2h__metric">Engagement per post</div>
+   <div class="h2h__duel">
+    <div class="h2h__side h2h__side--win"><div class="h2h__val">413</div><div class="h2h__brand">Haldiram's</div><span class="h2h__win">Winner · 4.6×</span></div>
+    <div class="h2h__vs">vs</div>
+    <div class="h2h__side"><div class="h2h__val">89.8</div><div class="h2h__brand">Bikanervala</div></div>
+   </div>
+   <div class="h2h__sub"><span><b>165k</b> followers<br><b>1.5</b> posts / wk</span><span style="text-align:right"><b>177k</b> followers<br><b>5</b> posts / wk</span></div>
+   <p class="h2h__verdict"><b>The content works; the cadence doesn't.</b> You out-engage Bikanervala 4.6× per post on barely a third of the posting. Post more often and that lead compounds fast.</p>
+  </div>
+  <div class="h2h__card reveal">
+   <div class="h2h__plat">Facebook</div>
+   <div class="h2h__date">Jun 12&ndash;26, 2026 · "Haldiram's Nagpur" vs Bikanervala</div>
+   <div class="h2h__metric">Engagement per post</div>
+   <div class="h2h__duel">
+    <div class="h2h__side"><div class="h2h__val">14.4</div><div class="h2h__brand">Haldiram's</div></div>
+    <div class="h2h__vs">vs</div>
+    <div class="h2h__side h2h__side--win"><div class="h2h__val">103</div><div class="h2h__brand">Bikanervala</div><span class="h2h__win">Winner · 7×</span></div>
+   </div>
+   <div class="h2h__sub"><span><b>122k</b> audience<br><b>5</b> posts / wk</span><span style="text-align:right"><b>268k</b> audience<br><b>5</b> posts / wk</span></div>
+   <p class="h2h__verdict"><b>Same effort, a fraction of the return.</b> Identical posting, yet 7× less engagement, half the audience and 6× fewer shares, all under a regional page name. This is the rebuild priority.</p>
+  </div>
+ </div>
+ <p class="stat-cap reveal">Source: Rival IQ Head-to-Head reports, Instagram &amp; Facebook, Jun 12&ndash;26 2026 — Haldiram's vs Bikanervala.</p>
+
+ <div class="lives-at reveal" style="margin-top:2rem">
+  <span><b>Why Facebook lags: architecture.</b></span>
+  <span style="flex:1;min-width:260px">The page above is named "Haldiram's Nagpur", a regional, legacy name reading as a single page, not a master brand. So Instagram is over-split across eight handles while Facebook is under-built and regionally labelled. Same root cause on both: no clear brand architecture.</span>
+ </div>
+ <div class="lives-at reveal" style="margin-top:1rem">
+  <span><b>The one thing Bikanervala does better.</b></span>
+  <span style="flex:1;min-width:260px">Their thumbnail game is sorted, every new-location reel cover states exactly where the store is opening, with a clear written message on it. It's the simplest win on this whole list, and the first thing we'd ship.</span>
  </div>
 
  <div class="manifesto reveal">
